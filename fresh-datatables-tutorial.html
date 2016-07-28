@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Fresh DataTables by Creative Tim</title>
+
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+	<!--  Style   -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/fresh-datatables.css" rel="stylesheet" />
+    <link href="assets/css/demo.css" rel="stylesheet" />
+
+    <!--   Fonts and icons   -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+	<!--   Plugin for styled code   -->
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <style>
+        body{
+            color: #FFFFFF;
+        }
+        .logo-container .brand{
+            color: #FFFFFF;
+        }
+        a{
+            color: #555555;
+        }
+
+		p > a,
+		p > a:hover,
+		p > a:focus{
+			color:#fff;
+		}
+
+        a:hover,
+        a:focus{
+            color: #444;
+        }
+        .fa-heart{
+            color: #F74933;
+        }
+        .space-100{
+            height: 100px;
+            display: block;
+        }
+        .space-50{
+            height: 50px;
+            display: block;
+        }
+        pre.prettyprint{
+            background-color: #444;
+            border: 1px solid #343434;
+            margin-top: 20px;
+            padding: 20px;
+            text-align: left;
+        }
+        .atv, .str{
+            color: #25C6EC;
+        }
+        .tag, .pln, .kwd{
+             color: #7A8CB2;
+        }
+        .atn{
+          color: #2C93FF;
+        }
+        .pln{
+           color: #EEEEEE;
+        }
+        .com{
+            color: #999;
+        }
+        .pun, .opn, .clo {
+          color: #C3C3C3;
+        }
+        .btn-neutral.btn-fill, .btn-neutral.btn-fill:hover, .btn-neutral.btn-fill:focus{
+            color: #555555;
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href="http://creative-tim.com">
+         <div class="logo-container">
+            <div class="logo">
+                <img src="assets/img/new_logo.png">
+            </div>
+            <div class="brand">
+                Creative Tim
+            </div>
+        </div>
+    </a>
+
+<div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:100px">
+       <h1 class="text-center">Fresh DataTables - Tutorial<br>
+           <small>This tutorial was made to make the integration as easy as possible.</small>
+       </h1>
+       <div class="col-md-12">
+       <br>
+        <h4>
+            We restyled the classic DataTables and made it look fresh and bright. Here are the files that you need to add in your project.
+        </h4>
+
+        <pre class="prettyprint">
+
+&lt;head&gt;
+
+&lt;!-- Style --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/bootstrap.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/fresh-datatables.css&quot; /&gt;
+
+&lt;!-- Fonts --&gt;
+&lt;link href=&quot;http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+
+
+&lt;/head&gt;
+        </pre>
+
+        <br>
+        <h4>
+            This is the main HTML code for the Fresh DataTables. You can create a table with any data or whatever you want. More details about the methods, data manipulations or functions available with this DataTables can be found <a href="http://datatables.net">here.</a>
+        </h4>
+        <pre class="prettyprint">
+&lt;div class=&quot;fresh-table full-color-purple&quot;&gt;
+	&lt;!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange, full-color-purple, full-color-gray
+	Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange, toolbar-color-purple, toolbar-color-gray
+	--&gt;
+
+	&lt;table id=&quot;example&quot; class=&quot;table table-striped table-no-bordered table-hover&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot; style=&quot;width:100%&quot;&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Name&lt;/th&gt;
+			&lt;th&gt;Position&lt;/th&gt;
+			&lt;th&gt;Office&lt;/th&gt;
+			&lt;th&gt;Age&lt;/th&gt;
+			&lt;th&gt;Start date&lt;/th&gt;
+			&lt;th class=&quot;disabled-sorting&quot;&gt;Actions&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Name&lt;/th&gt;
+			&lt;th&gt;Position&lt;/th&gt;
+			&lt;th&gt;Office&lt;/th&gt;
+			&lt;th&gt;Age&lt;/th&gt;
+			&lt;th&gt;Start date&lt;/th&gt;
+			&lt;th&gt;Actions&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Tiger Nixon&lt;/td&gt;
+			&lt;td&gt;System Architect&lt;/td&gt;
+			&lt;td&gt;Edinburgh&lt;/td&gt;
+			&lt;td&gt;61&lt;/td&gt;
+			&lt;td&gt;2011/04/25&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Garrett Winters&lt;/td&gt;
+			&lt;td&gt;Accountant&lt;/td&gt;
+			&lt;td&gt;Tokyo&lt;/td&gt;
+			&lt;td&gt;63&lt;/td&gt;
+			&lt;td&gt;2011/07/25&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Ashton Cox&lt;/td&gt;
+			&lt;td&gt;Junior Technical Author&lt;/td&gt;
+			&lt;td&gt;San Francisco&lt;/td&gt;
+			&lt;td&gt;66&lt;/td&gt;
+			&lt;td&gt;2009/01/12&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Cedric Kelly&lt;/td&gt;
+			&lt;td&gt;Senior Javascript Developer&lt;/td&gt;
+			&lt;td&gt;Edinburgh&lt;/td&gt;
+			&lt;td&gt;22&lt;/td&gt;
+			&lt;td&gt;2012/03/29&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Airi Satou&lt;/td&gt;
+			&lt;td&gt;Accountant&lt;/td&gt;
+			&lt;td&gt;Tokyo&lt;/td&gt;
+			&lt;td&gt;33&lt;/td&gt;
+			&lt;td&gt;2008/11/28&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Brielle Williamson&lt;/td&gt;
+			&lt;td&gt;Integration Specialist&lt;/td&gt;
+			&lt;td&gt;New York&lt;/td&gt;
+			&lt;td&gt;61&lt;/td&gt;
+			&lt;td&gt;2012/12/02&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Herrod Chandler&lt;/td&gt;
+			&lt;td&gt;Sales Assistant&lt;/td&gt;
+			&lt;td&gt;San Francisco&lt;/td&gt;
+			&lt;td&gt;59&lt;/td&gt;
+			&lt;td&gt;2012/08/06&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Rhona Davidson&lt;/td&gt;
+			&lt;td&gt;Integration Specialist&lt;/td&gt;
+			&lt;td&gt;Tokyo&lt;/td&gt;
+			&lt;td&gt;55&lt;/td&gt;
+			&lt;td&gt;2010/10/14&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Colleen Hurst&lt;/td&gt;
+			&lt;td&gt;Javascript Developer&lt;/td&gt;
+			&lt;td&gt;San Francisco&lt;/td&gt;
+			&lt;td&gt;39&lt;/td&gt;
+			&lt;td&gt;2009/09/15&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Sonya Frost&lt;/td&gt;
+			&lt;td&gt;Software Engineer&lt;/td&gt;
+			&lt;td&gt;Edinburgh&lt;/td&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;2008/12/13&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Jena Gaines&lt;/td&gt;
+			&lt;td&gt;Office Manager&lt;/td&gt;
+			&lt;td&gt;London&lt;/td&gt;
+			&lt;td&gt;30&lt;/td&gt;
+			&lt;td&gt;2008/12/19&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Quinn Flynn&lt;/td&gt;
+			&lt;td&gt;Support Lead&lt;/td&gt;
+			&lt;td&gt;Edinburgh&lt;/td&gt;
+			&lt;td&gt;22&lt;/td&gt;
+			&lt;td&gt;2013/03/03&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Charde Marshall&lt;/td&gt;
+			&lt;td&gt;Regional Director&lt;/td&gt;
+			&lt;td&gt;San Francisco&lt;/td&gt;
+			&lt;td&gt;36&lt;/td&gt;
+			&lt;td&gt;2008/10/16&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Haley Kennedy&lt;/td&gt;
+			&lt;td&gt;Senior Marketing Designer&lt;/td&gt;
+			&lt;td&gt;London&lt;/td&gt;
+			&lt;td&gt;43&lt;/td&gt;
+			&lt;td&gt;2012/12/18&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Tatyana Fitzpatrick&lt;/td&gt;
+			&lt;td&gt;Regional Director&lt;/td&gt;
+			&lt;td&gt;London&lt;/td&gt;
+			&lt;td&gt;19&lt;/td&gt;
+			&lt;td&gt;2010/03/17&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Michael Silva&lt;/td&gt;
+			&lt;td&gt;Marketing Designer&lt;/td&gt;
+			&lt;td&gt;London&lt;/td&gt;
+			&lt;td&gt;66&lt;/td&gt;
+			&lt;td&gt;2012/11/27&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Paul Byrd&lt;/td&gt;
+			&lt;td&gt;Chief Financial Officer (CFO)&lt;/td&gt;
+			&lt;td&gt;New York&lt;/td&gt;
+			&lt;td&gt;64&lt;/td&gt;
+			&lt;td&gt;2010/06/09&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Gloria Little&lt;/td&gt;
+			&lt;td&gt;Systems Administrator&lt;/td&gt;
+			&lt;td&gt;New York&lt;/td&gt;
+			&lt;td&gt;59&lt;/td&gt;
+			&lt;td&gt;2009/04/10&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Bradley Greer&lt;/td&gt;
+			&lt;td&gt;Software Engineer&lt;/td&gt;
+			&lt;td&gt;London&lt;/td&gt;
+			&lt;td&gt;41&lt;/td&gt;
+			&lt;td&gt;2012/10/13&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Dai Rios&lt;/td&gt;
+			&lt;td&gt;Personnel Lead&lt;/td&gt;
+			&lt;td&gt;Edinburgh&lt;/td&gt;
+			&lt;td&gt;35&lt;/td&gt;
+			&lt;td&gt;2012/09/26&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Jenette Caldwell&lt;/td&gt;
+			&lt;td&gt;Development Lead&lt;/td&gt;
+			&lt;td&gt;New York&lt;/td&gt;
+			&lt;td&gt;30&lt;/td&gt;
+			&lt;td&gt;2011/09/03&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Yuri Berry&lt;/td&gt;
+			&lt;td&gt;Chief Marketing Officer (CMO)&lt;/td&gt;
+			&lt;td&gt;New York&lt;/td&gt;
+			&lt;td&gt;40&lt;/td&gt;
+			&lt;td&gt;2009/06/25&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Caesar Vance&lt;/td&gt;
+			&lt;td&gt;Pre-Sales Support&lt;/td&gt;
+			&lt;td&gt;New York&lt;/td&gt;
+			&lt;td&gt;21&lt;/td&gt;
+			&lt;td&gt;2011/12/12&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Doris Wilder&lt;/td&gt;
+			&lt;td&gt;Sales Assistant&lt;/td&gt;
+			&lt;td&gt;Sidney&lt;/td&gt;
+			&lt;td&gt;23&lt;/td&gt;
+			&lt;td&gt;2010/09/20&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Angelica Ramos&lt;/td&gt;
+			&lt;td&gt;Chief Executive Officer (CEO)&lt;/td&gt;
+			&lt;td&gt;London&lt;/td&gt;
+			&lt;td&gt;47&lt;/td&gt;
+			&lt;td&gt;2009/10/09&lt;/td&gt;
+			&lt;td&gt;
+				&lt;a href=&quot;#&quot; class=&quot;like&quot;&gt;&lt;i class=&quot;fa fa-heart&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;edit&quot;&gt;&lt;i class=&quot;fa fa-edit&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+				&lt;a href=&quot;#&quot; class=&quot;remove&quot;&gt;&lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/td&gt;
+		&lt;/tr&gt;
+	   &lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+		</pre>
+
+        <br>
+        <h4>
+            Here are the javascript files that you have to include and the Javascript plugin that you have to call in your page. The core code for the Fresh-DataTables can be found in the 'jquery.dataTables.js'. Here is the code for initialising the table in your page:
+
+        </h4>
+         <pre class="prettyprint">
+
+ &lt;script src=&quot;assets/js/jquery.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/js/jquery.datatables.js&quot;&gt;&lt;/script&gt;
+ &lt;script&gt;
+
+ $(document).ready(function() {
+ 	$(&#39;#fresh-datatables&#39;).DataTable({
+ 		&quot;pagingType&quot;: &quot;full_numbers&quot;,
+ 		&quot;lengthMenu&quot;: [[10, 25, 50, -1], [10, 25, 50, &quot;All&quot;]],
+ 		responsive: true,
+ 		language: {
+ 		search: &quot;_INPUT_&quot;,
+ 		searchPlaceholder: &quot;Search records&quot;,
+ 		}
+
+ 	});
+
+
+ 	var table = $(&#39;#fresh-datatables&#39;).DataTable();
+     // Edit record
+     table.on( &#39;click&#39;, &#39;.edit&#39;, function () {
+ 		$tr = $(this).closest(&#39;tr&#39;);
+
+ 		var data = table.row($tr).data();
+ 		alert( &#39;You press on Row: &#39; + data[0] + &#39; &#39; + data[1] + &#39; &#39; + data[2] + &#39;\&#39;s row.&#39; );
+     } );
+
+     // Delete a record
+     table.on( &#39;click&#39;, &#39;.remove&#39;, function (e) {
+ 		$tr = $(this).closest(&#39;tr&#39;);
+ 		table.row($tr).remove().draw();
+ 		e.preventDefault();
+     } );
+
+ 	//Like record
+ 	table.on( &#39;click&#39;, &#39;.like&#39;, function () {
+ 		alert(&#39;You clicked on Like button&#39;);
+     } );
+ });
+
+ &lt;/script&gt;
+
+         </pre>
+
+        <h4>
+            Besides the default style, we added 5 new colors for the background of Fresh DataTables and for it's Toolbar: <b>blue</b>, <b>azure</b>, <b>green</b>, <b>orange</b>, <b>red</b>. If you want to use one of them, you can use the class for the chosen color: "full-color-{<b>blue | azure | green | orange | red | purple | gray</b>}" or "toolbar-color-{<b>blue | azure | green | orange | red | purple | gray</b>}".
+            <br><br>
+            If you want to use the table as Full Screen you have to remove the "<b>div</b>" with class "<b>container</b>" and add the class "<b>full-screen-table</b>" for the save "<b>div</b>" that has the class "<b>fresh-table</b>".
+        </h4>
+
+        <h4>Many thanks to our friend for open sourcing the base for this DataTables. More details can be found here <a href="http://datatables.net">here.</a>
+        </h4>
+        <h4>Get more useful items for Bootstrap on <a href="http://creative-tim.com">Creative Tim.</a></h4>
+    </div>
+
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+            <div class="space-50"></div>
+                <a href="http://creative-tim.com/product/fresh-bootstrap-table" class="btn btn-neutral btn-fill btn-lg btn-block">Free Download</a>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
+    <div class="space-100"></div>
+	<p class="text-center">
+		©
+		<script>
+			document.write(new Date().getFullYear())
+		</script> <a href="http://www.creative-tim.com">Creative Tim</a> , made with <i class="fa fa-heart ct-heart"></i> for a better web.
+	</p>
+<!-- end container -->
+</div>
+</div>
+<!-- end main -->
+
+</body>
+
+</html>
