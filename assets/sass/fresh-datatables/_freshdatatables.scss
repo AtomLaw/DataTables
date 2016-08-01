@@ -4,7 +4,7 @@
         border-bottom: 1px solid rgba(255,255,255, 0.3);
         border-collapse: collapse !important;
         border-radius: 1px;
-        
+
         > tbody > tr > th,
         > tfoot > tr > th,
         > thead > tr > td,
@@ -30,7 +30,7 @@
 
 }
 
-.fresh-table{
+.fresh-datatables{
     background-color: $white-color;
     border-radius: $border-radius-extreme;
     color: $black-font;
